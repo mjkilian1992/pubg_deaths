@@ -1,0 +1,10 @@
+# VirtualEnv
+venv
+
+# Data
+data
+
+# Pycharm
+.idea
+workspace.xml
+
