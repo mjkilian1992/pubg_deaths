@@ -1,0 +1,20 @@
+Interesting questions:
+
+- Do players in cars fare better?
+  - Can use placement and death info crossed with distance walked/distance drove
+  - Generally how does movement correlate with success?
+
+- What are the best sniping spots?
+  - Look for positions with high concentrations of long range kills and/or kills with long range weapons
+
+- Where are the best spots for scraps (close range)?
+
+- Average difference in placement between killer and victim?
+  - Try to dig into the disparity in skill
+
+
+NEXT STEPS:
+    - Enrich dataset with kill distance
+    - Set up a pipeline for taking a file in, adding enriched fields and saving it
+    - Look into tests for this
+    - EDA on kill distance and placement to find best sniper positions
