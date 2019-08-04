@@ -1,5 +1,6 @@
 import pandas
 
+from pubg import utils as pubg_utils
 from pubg.deaths import definitions as pubg_deaths_definitions
 
 FIELDS = {
@@ -42,3 +43,9 @@ def read_deaths_file_to_dataframe(filepath, **kwargs):
         df.drop(old_name, axis='columns', inplace=True)
 
     return df
+
+
+def save_file_to_csv(deaths_df, filename, create_dirs=True):
+    if create_dirs:
+        pubg_utils.create_directories_for_filepath(filename)
+    deaths_df.to_csv(filename, encoding='utf-8')

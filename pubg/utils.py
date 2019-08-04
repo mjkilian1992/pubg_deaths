@@ -1,3 +1,5 @@
+import os
+
 import pandas
 
 
@@ -18,3 +20,7 @@ def read_and_concat_dfs(filepaths, read_func):
         (read_func(filepath) for filepath in filepaths),
         ignore_index=True
     )
+
+
+def create_directories_for_filepath(filepath):
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
