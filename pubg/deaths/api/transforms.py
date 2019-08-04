@@ -46,3 +46,17 @@ def add_kill_distance(deaths_df):
     kill_distance_series = pubg_deaths_api_features.kill_distance(deaths_df)
     deaths_df[pubg_deaths_definitions.KILL_DISTANCE] = kill_distance_series
     return deaths_df
+
+
+def restrict_to_map(deaths_df, mapname):
+    """
+    Restrict the DataFrame to entries on the given game map
+    Args:
+        deaths_df:
+        mapname: A valid map name
+
+    Returns:
+        (pandas.DataFrame)
+    """
+    on_map = deaths_df[pubg_deaths_definitions.MAPNAME] == mapname
+    return deaths_df[on_map]
